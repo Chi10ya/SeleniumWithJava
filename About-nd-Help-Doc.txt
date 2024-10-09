@@ -14,27 +14,38 @@ https://www.youtube.com/playlist?list=PLUDwpEzHYYLtQzEEEldbjPAR-gnStv4sR
 	---------------------------------------------
 	
 	1 > Create a new local repository (one time)
+		
 		git init
 		
 		> For to check the status
+			
 			git status
 		
 	2 > Provided user info to git repo (one time)
+		
 		git config --global user.name "your name"
 		git config --global user.email "your email"
 		
 	3 > Adding files / Folders to staging / indexing area
+		
 		git add -A			--> Adding all the files and folders to staging
 		git add filename 	--> Adding a specific file name
 		git add *.java 		--> Adding the files with an extension of java
 		git add foldername	--> Adding a specific folder
 		
 	4 > Commit the code into Local(git) repository
+		
 		git commit -m "commit message"
 		
 	5 > Connect local repository with remote repo (One time)
+		
 		git remote add origin "https://github.com/Chi10ya/SeleniumWithJava.git"
 		
 	6 > Push the code into Remote repository
+		
 		git push origin master
 		
+	7 > If any changes happened at the Remote Repo (in Git Hub) for this existing project. You need to pull those changes
+	from remote repo (Git Hub) to your local repo and Working directory by using Git Pull command
+		
+		git pull "https://github.com/Chi10ya/SeleniumWithJava.git"
