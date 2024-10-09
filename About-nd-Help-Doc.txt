@@ -13,7 +13,7 @@ https://www.youtube.com/playlist?list=PLUDwpEzHYYLtQzEEEldbjPAR-gnStv4sR
 	Git Commands which are most commonly used.
 	---------------------------------------------
 	
-	1 > Create a new local repository (one time)
+	1 > Create a new local repository (It as ONE TIME activity where you use the below command for a new project created on your system)
 		
 		git init
 		
@@ -21,7 +21,7 @@ https://www.youtube.com/playlist?list=PLUDwpEzHYYLtQzEEEldbjPAR-gnStv4sR
 			
 			git status
 		
-	2 > Provided user info to git repo (one time)
+	2 > Provided user info to git repo (It as ONE TIME activity for to establish the connection with your Git Hub account)
 		
 		git config --global user.name "your name"
 		git config --global user.email "your email"
@@ -37,7 +37,7 @@ https://www.youtube.com/playlist?list=PLUDwpEzHYYLtQzEEEldbjPAR-gnStv4sR
 		
 		git commit -m "commit message"
 		
-	5 > Connect local repository with remote repo (One time)
+	5 > Connect local repository with remote repo (Its a ONE TIME activity for to add to the origin (git hub)
 		
 		git remote add origin "https://github.com/Chi10ya/SeleniumWithJava.git"
 		
@@ -45,7 +45,19 @@ https://www.youtube.com/playlist?list=PLUDwpEzHYYLtQzEEEldbjPAR-gnStv4sR
 		
 		git push origin master
 		
-	7 > If any changes happened at the Remote Repo (in Git Hub) for this existing project. You need to pull those changes
-	from remote repo (Git Hub) to your local repo and Working directory by using Git Pull command
+	7 > Pull the files from remote repository
+	
+		If any changes happened at the Remote Repo (in Git Hub) for this existing project. You need to pull those changes
+		from remote repo (Git Hub) to your local repo and Working directory by using Git Pull command
 		
 		git pull "https://github.com/Chi10ya/SeleniumWithJava.git"
+
+	
+	8 > Clone new repository to local system
+		
+		When you need to import the existing repository (existing project) from the Remote repository (Git Hub) to your local system for the initial time
+		
+		git clone "https://github.com/Chi10ya/SeleniumWithJava.git"
+		
+		
+	
