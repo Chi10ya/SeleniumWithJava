@@ -5,8 +5,8 @@ https://www.youtube.com/playlist?list=PLUDwpEzHYYLtQzEEEldbjPAR-gnStv4sR
 
 
 
-
-Session 55: Selenium with Java | Hybrid Framework | Git & GitHub Workflow | 2024 Series
+--------------------------------------------------------------------------------------------------
+>> Session 55: Selenium with Java | Hybrid Framework | Git & GitHub Workflow | 2024 Series
 
 > Creating Git Hub / Repo, Adding the files from Working directory to Staging and commiting from Staging to Local Repo
 and from Local repo to Remote repo
