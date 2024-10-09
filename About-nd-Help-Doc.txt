@@ -12,29 +12,30 @@ Session 55: Selenium with Java | Hybrid Framework | Git & GitHub Workflow | 2024
 and from Local repo to Remote repo
 
 	Git Commands which are most commonly used.
+	---------------------------------------------
 	
-	> Create a new local repository (one time)
+	1 > Create a new local repository (one time)
 		git init
 		
 		> For to check the status
 			git status
 		
-	> Provided user info to git repo (one time)
+	2 > Provided user info to git repo (one time)
 		git config --global user.name "your name"
 		git config --global user.email "your email"
 		
-	> Adding files / Folders to staging / indexing area
+	3 > Adding files / Folders to staging / indexing area
 		git add -A			--> Adding all the files and folders to staging
 		git add filename 	--> Adding a specific file name
 		git add *.java 		--> Adding the files with an extension of java
 		git add foldername	--> Adding a specific folder
 		
-	> Commit the code into Local(git) repository
+	4 > Commit the code into Local(git) repository
 		git commit -m "commit message"
 		
-	> Connect local repository with remote repo (One time)
+	5 > Connect local repository with remote repo (One time)
 		git remote add origin "https://github.com/Chi10ya/SeleniumWithJava.git"
 		
-	> Push the code into Remote repository
+	6 > Push the code into Remote repository
 		git push origin master
 		
