@@ -1,0 +1,105 @@
+Zalenium - Setting up auto scalling selenium grid on Docker containers - On YT - By QA Fox
+=============================================================================================
+
+
+Though we can setup selenium grid on docker by ourselves, but we can choose Zalenium for Selenium Grid setup for its advantages
+The below are the advantages of Setting up Selenium Grid using Zalenium
+
+	> Automnatic scaling up and down of Docker Containers on Need basis
+	> Live Previews
+	> Dashboard
+	> Parallel execution of scripts is possible
+	
+
+Pre-Requisite
+	> Docker is installed
+		> Downloading and installing Docker
+			> Pre-req : Windows 10 64 bit or higher
+				(Type winver in windows search and check the windows version)
+				
+			> Pre-req : Minimum 4 GB RAM
+			
+			> Pre-req : BIOS - Level Virtualization is enabled
+				(Search for task manager in windows search, go to Performance Tab and check Virtualization is enabled)
+				
+			> Pre-req : Enable WSL2
+				Enable WSL2 (i.e Windows Subsystem for linux) feature in Windows
+					> Search for 'Turn windows feature on or off' in windows search and make sure the below 'Windows Features' options are selected
+						> Windows Subsystem for Linux
+						> Virtual Machine Platform
+				 	> Restart the PC
+					> Check Step # 2 at https://docs.microsoft.com/en-us/windows/wsl/install-manual
+						> Build lower than 18362 do not support WSL2
+						> Type winver in windows search and check
+					> Check Step # 4 at https://docs.microsoft.com/en-us/windows/wsl/install-manual
+						> Download the Linux kernel update package and install
+						> Restart your PC
+					> Check Step # 5 at https://docs.mircosoft.com/en-us/windows/wsl/install-manual
+						> Open Powershell and run the command " wsl --set-default-version 2 "
+						> Restart your PC
+					> For to check whether WSL2 is installed properly on your windows machine or not for to check that Linux can be accessed from your windows machine
+						> Check Step # 6 "Install your linux distribution of choice" at https://docs.mircosoft.com/en-us/windows/wsl/install-manual
+						 	
+						 	1: Click on "Debian GNU/Linux"
+						 	2: Click on Get button for to get "Debian" from the Microsoft Store
+						 	3: Open the Microsoft Store and select your favourite Linux distribution
+						 	
+				
+					> Install Ubuntu 18.04 LTS at Mircosoft Store at link https://www.microsoft.com/en-in/p/ubuntu-1804-lts/9n9tngvndl3q?rtc=1&activetab=pivot:overviewtab
+						> Install and open it
+						> Set username and password
+						> We can later open it by searching it in Windows
+						
+			> Search 'Download Docker for windows' in Google
+					> Install Docker with default settings
+					> Launch it by searching 'Docker' in windows
+			
+			> Check the below Commands in Command prompt
+					docker -v
+					
+			> Post Steps : Restart the machine after installing Docker
+			
+			> Docker Knowledge
+			
+			> Selenium Grid Knowledge
+			
+			> Steps for setting up Auto Scaling Grid on Docker containers using Zalenium
+				> Google search for Zalenium
+				> Naviage to opensoure.zalando.com/zalenium
+				> Find instructions on the official website of Zalenium
+					> Supports Fireforx and Chrome Browsers by default on Local Machines
+					> For other browsers we have to connect to Cloud platforms like (SauceLabs, BrowserStack, TestingBot, CrossBrowserTesting, LambdaTest)
+					> Also, works with Kubernetes
+					> Instructions for starting Zalenium
+					
+						This is the quick start for the docker version,
+						
+							# Pull docker-selenium image
+    								docker pull elgalu/selenium
+    
+   							# Pull Zalenium image
+    								docker pull dosel/zalenium
+    
+    						# Run it! (If any \ exists in the below command, remove it and make the command in a single line as below stated)
+    								docker run --rm -ti --name zalenium -p 4444:4444 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos --privileged dosel/zalenium start
+      
+    						# Point your tests to http://localhost:4444/wd/hub and run them
+
+    						# Stop
+    							docker stop zalenium
+							
+					> Grid, Console and Live Preview links to check once the Zalenium is up
+							Grid Console : https://localhost:4444/grid/console
+							Grid Dashboard : https://localhost:4444/dashboard
+							Grid Live Privew : https://localhost:4444/grid/admin/live
+								
+				> Running the automation scripts on Zalenium
+					Firefox
+					Chrome
+						> Workaround for Chrome - options.addArguments("--disable-dev-shm-usage");
+					Parallel Execution of more than 2 tests for watching Auto-scaling feature of Zalenium
+				> Check Dashboard and Live links
+					
+					
+					
+					
